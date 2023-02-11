@@ -1,0 +1,175 @@
+﻿@model StudentEnrolmentWeb.Models.StudentDetailsMVC
+
+@{
+    ViewData["Title"] = "AddOrEdit";
+}
+<style>
+    div {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+    }
+</style>
+
+<h1>AddOrEdit</h1>
+
+<h4>StudentDetailsMVC</h4>
+<span><a href="">Edit</a></span>
+<script defer>
+    document.getElementById("form1").addEventListener('click', editName);
+function editName() {
+        
+
+        var enable = (this.disabled);
+        document.getElementById('name').disabled = enable;
+};
+</script>
+<div class="row">
+    <div class="col-md-6">
+        
+        <form id"form1">
+            <style>
+                .form_wrapper {
+                    width: 50%; /* the width of half of your space or 50% */
+                    float: left;
+                }
+            </style>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label" ></label>
+                <!-- <input asp-for="StudentId" class="form-control" />-->
+                <input asp-for="StudentId" id="name" disabled />
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label" ></label>
+                <input asp-for="FirstName" id="name" disabled  />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label" ></label>
+                <input asp-for="LastName" id="name" disabled />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KnownAs" class="control-label"></label>
+                <input asp-for="KnownAs" readonly />
+                <span asp-validation-for="KnownAs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DisplayName" class="control-label"></label>
+                <input asp-for="DisplayName" readonly />
+                <span asp-validation-for="DisplayName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" readonly />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" readonly />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UniversityEmail" class="control-label"></label>
+                <input asp-for="UniversityEmail" readonly />
+                <span asp-validation-for="UniversityEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetworkId" class="control-label"></label>
+                <input asp-for="NetworkId" readonly />
+                <span asp-validation-for="NetworkId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HomeOrOverseas" class="control-label"></label>
+                <input asp-for="HomeOrOverseas" readonly />
+                <span asp-validation-for="HomeOrOverseas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+        
+            <form
+                asp-action="AddOrEdit">
+                 <style>
+                    .form_wrapper {
+                    width: 45%; /* the width of half of your space or 50% */
+                    float: right;
+                    }
+                    </style>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].EnrolmentId" class="control-label"></label>
+                        <!-- <input asp-for="StudentId" class="form-control" />-->
+                        <input asp-for="CourseEnrolment[0].EnrolmentId" />
+                <span asp-validation-for="CourseEnrolment[0].EnrolmentId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].AcademicYear" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].AcademicYear" />
+                <span asp-validation-for="CourseEnrolment[0].AcademicYear" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].YearOfStudy" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].YearOfStudy" />
+                <span asp-validation-for="CourseEnrolment[0].YearOfStudy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].Occurrence" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].Occurrence" />
+                <span asp-validation-for="CourseEnrolment[0].Occurrence" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].ModeOfAttendance" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].ModeOfAttendance" />
+                <span asp-validation-for="CourseEnrolment[0].ModeOfAttendance" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].EnrolmentStatus" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].EnrolmentStatus" />
+                <span asp-validation-for="CourseEnrolment[0].EnrolmentStatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].CourseEntryDate" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].CourseEntryDate" />
+                <span asp-validation-for="CourseEnrolment[0].CourseEntryDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].ExpectedEndDate" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].ExpectedEndDate" />
+                <span asp-validation-for="CourseEnrolment[0].ExpectedEndDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].Course.CourseCode" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].Course.CourseCode" />
+                <span asp-validation-for="CourseEnrolment[0].Course.CourseCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                <label asp-for="CourseEnrolment[0].Course.CourseName" class="control-label"></label>
+                <input asp-for="CourseEnrolment[0].Course.CourseName" />
+                <span asp-validation-for="CourseEnrolment[0].Course.CourseName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="SaveEnrolment" class="btn btn-primary" />
+                    </div>
+            
+            </form>
+            </tr>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

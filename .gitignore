@@ -1,0 +1,229 @@
+
+Skip to content
+ 
+Search…
+All gists
+Back to GitHub
+@chaithukvl 
+@vmandic
+vmandic/dotnet core .gitignore
+Last active 3 weeks ago • Report abuse
+81
+17
+Code
+Revisions
+4
+Stars
+81
+Forks
+17
+<script src="https://gist.github.com/vmandic/ac2ecc9c24f6899ee0ec46e4ce444a0e.js"></script>
+A default .NET Core project .gitignore file - or just type `dotnet new gitignore`
+dotnet core .gitignore
+# From .NET Core 3.0 you can use the command: `dotnet new gitignore` to generate a customizable .gitignore file
+
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+@jamiegs
+jamiegs commented on Jul 20, 2018
+I find it useful to commit the .vscode directory so every user doesn't need to configure their own tasks.json and launch.json files.
+
+@alexisEstudiante
+alexisEstudiante commented on May 18, 2019
+what about the obj/ and bin/?
+
+@MrGrabazu
+MrGrabazu commented on May 20, 2019
+what about the obj/ and bin/?
+
+[Bb]in/ cover both bin/ and Bin/
+[Oo]bj/ cover both obj/ and Obj/
+
+Or I misunderstood your interrogation ?
+
+@davidACash
+davidACash commented on May 29, 2019
+Does this work for VS 2019 projects?
+
+@MrGrabazu
+MrGrabazu commented on May 29, 2019
+I do not try it but I guess it does. You may need to check before commit if there are some undesired files but it may cover it pretty nicely.
+
+@mauriciogracia
+mauriciogracia commented on Jun 3, 2019
+Thanks for sharing, is important to include this file in the root folder of the local repository before doing your first "git add" if you already have some file in the repository you can check this question in stackoverflow - https://stackoverflow.com/questions/31543997/make-git-ignore-dll-pdb-and-similar-generate-files
+
+@wcpmahmudul
+wcpmahmudul commented on Aug 22, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+@twmbx
+twmbx commented on Sep 1, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Epic comment. Thanks a bunch @wcpmahmudul.
+
+@HyperCC
+HyperCC commented on Sep 2, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+That command allows uploading some files from the .vscode folder, is that normal? I understood that the entire folder was not uploaded.
+
+@jeffjohnson
+jeffjohnson commented on Sep 8, 2020
+@wcpmahmudul Awesome
+
+@danosilva81
+danosilva81 commented on Sep 23, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+This works great! Thanks
+
+@wladneto
+wladneto commented on Sep 25, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Perfect!
+@leslie-alldridge
+leslie-alldridge commented on Oct 14, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Fantastic, cheers
+
+@CodeLyoko2610
+CodeLyoko2610 commented on Dec 20, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Nice! Thanks!
+
+@kathyrollo
+kathyrollo commented on Dec 22, 2020
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Not all heroes wear capes.
+
+@karol7345
+karol7345 commented on Jan 23, 2021
+Thanks!
+
+@chinedudara
+chinedudara commented on Mar 1, 2021
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+You're the man!
+
+@SammyGCh
+SammyGCh commented on Mar 2, 2021
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+That command allows uploading some files from the .vscode folder, is that normal? I understood that the entire folder was not uploaded.
+
+I'm new in NET Core and I have NET 5. Does this command work for this version as well?
+
+@mauriciogracia
+mauriciogracia commented on Mar 2, 2021
+As far as I know, yes. Give it at try and let us know if you find any issues
+
+@SammyGCh
+SammyGCh commented on Mar 4, 2021
+As far as I know, yes. Give it at try and let us know if you find any issues
+
+It works! Thank you!
+
+@wineloy
+wineloy commented on Apr 29, 2021
+From Dot.Net core 3.0, .gitignore can be easily added by simple command. Run "dotnet new gitignore" on project root folder.
+
+Wow!
+
+@64J0
+64J0 commented on Sep 23, 2021
+Hey man, I was reading the paket docs and there they recommend do set those lines for the .gitignore related to the paket files/folders:
+
+Make sure to add the following entries to your .gitignore:
+
+#Paket dependency manager
+.paket/
+paket-files/
+Can you please change this file according to this information?
+
+Btw, I got this information in this page. It is written immediately before the section called "Install the Paket bootstrapper (legacy)".
+
+@josuecaleb6482
+josuecaleb6482 commented on Mar 28, 2022
+Thanks
+
+@abd-el-rahman-abd-el-zaher
+abd-el-rahman-abd-el-zaher commented on May 29, 2022
+thanks
+
+@vmandic
+Author
+vmandic commented on Jun 10, 2022
+Damn folks, just type dotnet new gitignore :D
+
+@nNabakhteveli
+nNabakhteveli commented on Jul 23, 2022
+Damn folks, just type dotnet new gitignore :D
+
+True :D
+
+@angusfungayi
+angusfungayi commented on Nov 30, 2022
+dotnet new gitignore command does the job
+
+@chaithukvl
+ 
+Add heading textAdd bold text, <Cmd+b>Add italic text, <Cmd+i>
+Add a quote, <Cmd+Shift+.>Add code, <Cmd+e>Add a link, <Cmd+k>
+Add a bulleted list, <Cmd+Shift+8>Add a numbered list, <Cmd+Shift+7>Add a task list, <Cmd+Shift+l>
+Directly mention a user or team
+Reference an issue or pull request
+Leave a comment
+No file chosen
+Attach files by dragging & dropping, selecting or pasting them.
+Styling with Markdown is supported
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
